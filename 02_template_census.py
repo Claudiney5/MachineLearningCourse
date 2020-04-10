@@ -18,6 +18,8 @@ predictors[:, 8] = labelencoder_predictors.fit_transform(predictors[:, 8])
 predictors[:, 9] = labelencoder_predictors.fit_transform(predictors[:, 9])
 predictors[:, 13] = labelencoder_predictors.fit_transform(predictors[:, 13])
 
+# ONE HOT ENCODER
+
 one_hot = OneHotEncoder(categorical_features=[1, 3, 5, 6, 7, 8, 9, 13])
 predictors = one_hot.fit_transform(predictors).toarray()
 
@@ -33,7 +35,8 @@ predictors = scaler.fit_transform(predictors)
 from sklearn.cross_validation import train_test_split
 train_predictors, test_predictors, train_class, test_class = train_test_split(predictors, classifier, test_size=0.15, random_state=0)
 
-
+# importação biblioteca
+# criação do classificador
 
 classificador.fit(train_predictors, train_class)
 predicts = classificador.predict(test_predictors)
