@@ -29,11 +29,14 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 predictors = scaler.fit_transform(predictors)
 
+#--------------------------------------
+
 # DIVISÃO DE BASES
 from sklearn.cross_validation import train_test_split
 train_predictors, test_predictors, train_class, test_class = train_test_split(predictors, classifier, test_size=0.15, random_state=0)
 
-
+from sklearn.ensemble import RandomForestClassifier
+classificador = RandomForestClassifier(n_estimators=40, criterion='entropy', random_state=0)
 
 classificador.fit(train_predictors, train_class)
 predicts = classificador.predict(test_predictors)
