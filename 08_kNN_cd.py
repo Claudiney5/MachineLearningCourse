@@ -1,4 +1,11 @@
 # -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 21 09:56:18 2020
+
+@author: Claudiney
+"""
+
+# -*- coding: utf-8 -*-
 
 import pandas as pd
 
@@ -22,8 +29,8 @@ predictors = scaler.fit_transform(predictors)
 from sklearn.model_selection import train_test_split
 training_predictors, test_predictors, training_class, test_class = train_test_split(predictors, classifier, test_size=0.25, random_state=0)
 
-#importação da biblioteca
-#criação do classificador
+from sklearn.neighbors import KNeighborsClassifier
+classificador = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
 classificador.fit(training_predictors, training_class)
 previsoes = classificador.predict(test_predictors)
 

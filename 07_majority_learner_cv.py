@@ -16,6 +16,10 @@ base_teste = base_dividida[0]
 len(base_treinamento)
 len(base_teste)
 
-classificador = Orange.classification.MajorityLearny()
+classificador = Orange.classification.MajorityLearner()
 resultado = Orange.evaluation.testing.TestOnTestData(base_treinamento, base_teste, [classificador])
 print(Orange.evaluation.CA(resultado))
+
+from collections import Counter
+print(Counter(str(d.get_class())for d in base_teste))
+
