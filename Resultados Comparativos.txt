@@ -1,0 +1,25 @@
+Credit Data - Comparative
+--------------------------------
+0.938 - Naive Bayes (inconsistentes + faltantes + escalonamento)
+0.982 - Decision Tree (inconsistentes + faltantes + escalonamento)
+0.982 - Random Forest = 40 (inconsistentes + faltantes + escalonamento)
+
+
+
+Census - Comparative
+--------------------------------
+0.477 - Naive Bayes (labelencoder + onehotencoder + escalonamento)
+0.795 - Naive Bayes (labelencoder)
+0.795 - Naive Bayes (labelencoder + onehotencoder)
+0.806 - *Naive Bayes (labelencoder + escalonamento) 
+
+0.8102 - Decision Tree (labelencoder + onehotencoder + escalonamento)
+0.8128 - *Decision Tree (labelencoder)
+0.8102 - Decision Tree (labelencoder + onehotencoder)
+0.8128 - *Decision Tree (labelencoder + escalonamento)
+
+0.8477 - Random Forest = 40 (labelencoder + onehotencoder + escalonamento)
+0.8481 - Random Forest = 40 (labelencoder)
+0.8489 - *Random Forest = 40 (labelencoder + onehotencoder)
+0.8479 - Random Forest = 40 (labelencoder + escalonamento)
+
