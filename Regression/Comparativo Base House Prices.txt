@@ -1,0 +1,46 @@
+Base de dados HOUSE PRICES
+
+COMPARATIVO
+
+
+Regressão Linear Simples
+========================
+score: 0.49 / 0.48  
+MAE: 172.604
+
+Regressão Linear Múltipla
+========================
+score: 0.70 / 0.68
+MAE: 123.888
+
+Regressão Polinomial
+========================
+degree: 4
+score: 0.86 / 0.81(?)
+MAE: 145.594
+
+Regressão Polinomial
+========================
+degree: 2
+score: 0.82 / 0.81(?)
+MAE: 101.235
+
+Regressão Árvore de Decisão
+========================
+score: 0.999 / 0.74 # 0,74 na de teste => indica OVERFITING
+MAE: 99.328   
+
+Random Forest (100 árvores)
+========================
+score: 0.981 / 0.981
+MAE: 68.008  #  MELHOR
+
+SVR Kernel rbf C=1.0
+========================
+score: 0.812 / 0.738
+MAE: 82.486
+
+SVR Kernel rbf C=10.0
+========================
+score: 0.923 / 0.778
+MAE: 80.707
