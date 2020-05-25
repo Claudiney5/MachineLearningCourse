@@ -44,3 +44,10 @@ SVR Kernel rbf C=10.0
 ========================
 score: 0.923 / 0.778
 MAE: 80.707
+
+Redes Neurais (9, 9, 9)
+=======================
+score: 0.899 / 0.883
+MAE: 74.888
+* cross_validation mean/standart: 0.876 / 0.0219
+
